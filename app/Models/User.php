@@ -13,19 +13,18 @@ class User extends Authenticatable
     /**
      * Kolom yang dapat diisi secara massal.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $fillable = [
+        'name',
         'email',
         'password',
-        'name',
-        'active',
     ];
 
     /**
-     * Kolom yang disembunyikan saat serialisasi.
+     * Kolom yang harus disembunyikan saat serialisasi.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $hidden = [
         'password',
@@ -33,9 +32,9 @@ class User extends Authenticatable
     ];
 
     /**
-     * Tipe data kolom yang akan di-cast.
+     * Kolom yang harus di-cast tipe datanya.
      *
-     * @var array<string, string>
+     * @var array
      */
     protected $casts = [
         'email_verified_at' => 'datetime',

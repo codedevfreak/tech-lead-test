@@ -12,14 +12,15 @@ class Order extends Model
     /**
      * Kolom yang dapat diisi secara massal.
      *
-     * @var array<int, string>
+     * @var array
      */
     protected $fillable = [
-        'user_id', // ID pengguna yang memiliki pesanan
+        'user_id',
+        'total',
     ];
 
     /**
-     * Relasi: Setiap pesanan dimiliki oleh satu pengguna.
+     * Relasi: Satu pesanan dimiliki oleh satu pengguna.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
